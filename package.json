@@ -1,0 +1,27 @@
+{
+  "name": "start_html",
+  "version": "1.0.0",
+  "description": "my_own_start_html_template",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "antoha_xr2350",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.11.2",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cache": "^0.4.3",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-iconfont": "^6.0.0",
+    "gulp-iconfont-css": "^2.1.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp.spritesmith": "^6.2.1",
+    "imagemin-pngquant": "^4.2.2"
+  }
+}
