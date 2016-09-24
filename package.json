@@ -1,7 +1,7 @@
 {
   "name": "start_html",
   "version": "1.0.0",
-  "description": "my_own_start_html_template",
+  "description": "wp-gulp_theme_dev",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

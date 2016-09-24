@@ -106,3 +106,33 @@ gulp.task('iconfont', function(){
 			})
 		.pipe(gulp.dest('../fonts/owniconfont'));
 });
+
+//-----------------------------------Minified tasks
+//js скрипты
+gulp.task('scripts', function() {
+	return gulp.src([ // Берем все необходимые библиотеки
+		'../libs/jquery/jquery-1.12.3.min.js', // Берем jQuery
+		'../libs/maskedinput/jquery.maskedinput.min.js',
+		'../libs/magnific-popup/dist/jquery.magnific-popup.min.js', 
+		'../js/main.js' // Берем main.js
+		])
+		.pipe(concat('all.min.js')) // Собираем их в кучу в новом файле all.min.js
+		.pipe(uglify()) // Сжимаем JS файл
+		.pipe(gulp.dest('../js')); // Выгружаем
+});
+
+//clear cache
+gulp.task('clear', function (callback) {
+	return cache.clearAll();
+})
+
+gulp.task('production',  ['img', 'styles', 'scripts'], function() {
+	var moveCss = gulp.src([
+			'../css/main.css'
+		])
+		.pipe(cssnano({
+					discardComments: {removeAll: true} // удаляем комментарии в css
+				})) //минификация css
+		.pipe(gulp.dest('../css')); // возвращаем назад
+
+});
